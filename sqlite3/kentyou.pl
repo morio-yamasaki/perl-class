@@ -40,7 +40,7 @@ while ( my $row = shift(@$result)){
 $conn->command(q{UPDATE data set kentyou ='さいたま'where  id = 11});
 #id 11 , dennwa 048(824)2111 , kentyou さいたま
 $conn->command(q{select * from data where id >5 and id <14});
-my $result = $conn->result;
+$result = $conn->result;
 
 while ( my $row = shift(@$result)){
     foreach ( keys(%$row) ) {
